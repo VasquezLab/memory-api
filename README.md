@@ -110,6 +110,8 @@ R//: Con el comando gdb, podemos ver a mas detaller el debug del código. Y si s
 
 
 6. Codifique un programa que asigne un array de enteros (como arriba), luego lo libere, y entonces intente imprimir el valor de un elemento del array. ¿El programa corre?, ¿Que pasa cuando hace uso de ```valgrind```?
+**R//:** Sí, el programa se ejecuta sin errores. Ejecutando valgrind este indica que hay un error de lectura, el cual se hace en el array que fue previamente liberado.
+
 
 7. Ahora pase un **funny value** para liberar (e.g. un puntero en la mitad del array que usted ha asignado) ¿Qué pasa?, ¿Ústed necesita herramientas para encontrar este tipo de problemas?
 
