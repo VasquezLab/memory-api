@@ -98,8 +98,12 @@ R//: Con el comando gdb, podemos ver a mas detaller el debug del código. Y si s
 
 
 3. Haga uso de la herramienta ```valgrind``` en el programa empleado en los puntos anteriores. Se usará la herramienta ```memcheck``` que es parte de ```valgrind``` para analizar lo que pasa: ```valgrind --leak-check=yes null```. ¿Qué pasa cuando corre esto?, ¿Puede usted interpretar la salida de la herramienta anterior?
+**R//:** Se puede interprestar la salida, valgrind informa sobre un error de segmentación (Segmentation fault) en el main en la linea 6. Adicionalmente ofrece el resumen del HEAP pero en este caso está vacío.
+
 
 4. Escriba un programa sencillo que asigne memoria usando ```malloc()``` pero olvide liberarla antes de que el programa termina. ¿Qué pasa cuando este programa se ejecuta?, ¿Puede usted usar gdb para encontrar problemas como este?, ¿Que dice acerca de Valgrind (de nuevo use este con la bandera ```--leak check=yes```)?
+**R//:** No hay probelma con al ejecución normal del programa. Con gdb no, no informa de algun error. Ejecutando valgrind se ve una perdida de memoria, con el programa usamos malloc de tamaño 2.
+
 
 5. Escriba un programa que cree un array de enteros llamado data de un tamaño de 100 usando ```malloc```; entonces, lleve el ```data[100]``` a ```0```. ¿Qué pasa cuando este programa se ejecuta?, ¿Qué pasa cuando se corre el programa usando ```valgrind```?, ¿El programa es correcto?
 
