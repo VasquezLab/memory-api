@@ -106,6 +106,8 @@ R//: Con el comando gdb, podemos ver a mas detaller el debug del código. Y si s
 
 
 5. Escriba un programa que cree un array de enteros llamado data de un tamaño de 100 usando ```malloc```; entonces, lleve el ```data[100]``` a ```0```. ¿Qué pasa cuando este programa se ejecuta?, ¿Qué pasa cuando se corre el programa usando ```valgrind```?, ¿El programa es correcto?
+**R//:** Se nota que ejecutando con valgrind el programa hay neuvamente uan fuga de memoria, ene ste caso 1424 bytes, de igual forma la ejecución finaliza sin problema
+
 
 6. Codifique un programa que asigne un array de enteros (como arriba), luego lo libere, y entonces intente imprimir el valor de un elemento del array. ¿El programa corre?, ¿Que pasa cuando hace uso de ```valgrind```?
 
