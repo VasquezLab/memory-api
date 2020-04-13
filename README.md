@@ -114,6 +114,8 @@ R//: Con el comando gdb, podemos ver a mas detaller el debug del código. Y si s
 
 
 7. Ahora pase un **funny value** para liberar (e.g. un puntero en la mitad del array que usted ha asignado) ¿Qué pasa?, ¿Ústed necesita herramientas para encontrar este tipo de problemas?
+**R//:** Al ejecutar el codigo tenemos un problema por un apuntador invalido y aborta la ejecución. Ejecutando valgrind se logra ver los errores puntuales del apuntador invalido y así se logra hace run inicio de debugg
+
 
 8. Intente usar alguna de las otras interfaces para asignacion de memoria. Por ejemplo, cree una estructura de datos simple similar a un vector y que use rutinas que usen realloc para manejar el vector. Use un array para almacenar los elementos del vector; cuando un usuario agregue una entrada al vector, use realloc para asignar un espacio mas a este. ¿Que tan bien funciona el vector asi?, ¿Como se compara con una lista enlazada?, utilice ```valgrind``` para ayudarse en la busqueda de errores.
 
